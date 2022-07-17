@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 2204104827881186766}
   - component: {fileID: 2204104827881186767}
   - component: {fileID: 2204104827881186762}
-  - component: {fileID: 2204104827881186757}
   - component: {fileID: 8303541604830686872}
   m_Layer: 0
   m_Name: Aim
@@ -31,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 2204104827881186764}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 33.7, z: -1.5999999}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 10, y: 10, z: 10}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -114,32 +113,6 @@ MonoBehaviour:
   AlwaysReplicateAsRoot: 0
   DontDestroyWithOwner: 0
   AutoObjectParentSync: 1
---- !u!114 &2204104827881186757
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2204104827881186764}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e96cb6065543e43c4a752faaa1468eb1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  SyncPositionX: 1
-  SyncPositionY: 1
-  SyncPositionZ: 1
-  SyncRotAngleX: 1
-  SyncRotAngleY: 1
-  SyncRotAngleZ: 1
-  SyncScaleX: 1
-  SyncScaleY: 1
-  SyncScaleZ: 1
-  PositionThreshold: 0.001
-  RotAngleThreshold: 0.01
-  ScaleThreshold: 0.01
-  InLocalSpace: 0
-  Interpolate: 1
 --- !u!114 &8303541604830686872
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -152,3 +125,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b08f0bd1574e48a79d24490d040ae085, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _speed: 1

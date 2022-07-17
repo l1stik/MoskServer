@@ -9,17 +9,19 @@ namespace CoreLogic.Client
         [SerializeField] private CinemachineVirtualCamera _virtualCamera;
         [SerializeField] private GameObject _camera;
         [SerializeField] private NetworkObject _networkObject;
-
-        private void Start()
+        
+        public override void OnNetworkSpawn()
         {
-            if (!_networkObject.IsLocalPlayer)
+            if (_networkObject.IsLocalPlayer)
+            {
+                var aim = GameObject.Find("Aim");
+                SetAim(aim.transform);
+            }
+            else
             {
                 _camera.SetActive(false);
-                return;
             }
-            
-            var aim = GameObject.Find("Aim");
-            SetAim(aim.transform);
+            base.OnNetworkSpawn();
         }
 
         private void SetAim(Transform aim)
