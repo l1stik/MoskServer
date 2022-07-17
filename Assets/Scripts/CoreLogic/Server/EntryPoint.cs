@@ -13,17 +13,21 @@ namespace CoreLogic.Server
         
         private void Start()
         {
-            _startServerButton.onClick.AddListener(() =>
-            {
-                NetworkManager.Singleton.StartServer();
-                _canvas.SetActive(false);
-            });
+            _startServerButton.onClick.AddListener(StartServer);
             
-            _startClientButton.onClick.AddListener(() =>
-            {
-                NetworkManager.Singleton.StartClient();
-                _canvas.SetActive(false);
-            });
+            _startClientButton.onClick.AddListener(StartClient);
+        }
+
+        private void StartServer()
+        {
+            NetworkManager.Singleton.StartServer();
+            _canvas.SetActive(false);
+        }
+        
+        private void StartClient()
+        {
+            NetworkManager.Singleton.StartClient();
+            _canvas.SetActive(false);
         }
     }
 }
