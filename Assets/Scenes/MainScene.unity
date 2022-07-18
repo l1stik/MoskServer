@@ -223,11 +223,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2204104827881186760, guid: ab488364e448340d4b51be3dcba0a308, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 33.7
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 2204104827881186760, guid: ab488364e448340d4b51be3dcba0a308, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1.5999999
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2204104827881186760, guid: ab488364e448340d4b51be3dcba0a308, type: 3}
       propertyPath: m_LocalRotation.w
@@ -299,7 +299,6 @@ MonoBehaviour:
   _startServerButton: {fileID: 1911637490}
   _startClientButton: {fileID: 1196171534}
   _canvas: {fileID: 1568632475}
-  _game: {fileID: 1825034180}
   _labelWarning: {fileID: 912070096}
 --- !u!4 &136899681
 Transform:
@@ -519,7 +518,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   RunInBackground: 1
-  LogLevel: 1
+  LogLevel: 0
   NetworkConfig:
     ProtocolVersion: 0
     NetworkTransport: {fileID: 885390806}
@@ -1021,11 +1020,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!1 &1825034180 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2204104827881186764, guid: ab488364e448340d4b51be3dcba0a308, type: 3}
-  m_PrefabInstance: {fileID: 108734114}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1911637488
 GameObject:
   m_ObjectHideFlags: 0

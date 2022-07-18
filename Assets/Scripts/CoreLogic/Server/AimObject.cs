@@ -5,7 +5,7 @@ namespace CoreLogic.Server
 {
     public class AimObject : NetworkBehaviour
     {
-        [SerializeField] private float _speed = 1f;
+        [SerializeField] private float _speed = 5f;
         
         private void Update()
         {

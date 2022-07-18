@@ -1,4 +1,3 @@
-using Cinemachine;
 using Unity.Netcode;
 using UnityEngine;
 
@@ -6,16 +5,16 @@ namespace CoreLogic.Client
 {
     public class PlayerController : NetworkBehaviour
     {
-        [SerializeField] private CinemachineVirtualCamera _virtualCamera;
         [SerializeField] private GameObject _camera;
         [SerializeField] private NetworkObject _networkObject;
+        
+        [SerializeField] private Vector3 _spawnPoint;
         
         public override void OnNetworkSpawn()
         {
             if (_networkObject.IsLocalPlayer)
             {
-                var aim = GameObject.Find("Aim");
-                SetAim(aim.transform);
+                transform.position = _spawnPoint;
             }
             else
             {
@@ -24,10 +23,9 @@ namespace CoreLogic.Client
             base.OnNetworkSpawn();
         }
 
-        private void SetAim(Transform aim)
+        private void OnTriggerExit(Collider other)
         {
-            _virtualCamera.Follow = aim;
-            _virtualCamera.LookAt = aim;
+            transform.position = _spawnPoint;
         }
     }
 }
