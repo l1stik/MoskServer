@@ -20,8 +20,6 @@ namespace CoreLogic.Client
         {
             var deltaTime = Time.deltaTime;
 
-            var rotation = Quaternion.Euler(_y, _x, 0);
-           
             _targetPosition = transform.position;
             _moveDirection = Vector3.zero;
             
@@ -50,7 +48,7 @@ namespace CoreLogic.Client
                 _x += Input.GetAxis("Mouse X") * _speed;
                 _y -= Input.GetAxis("Mouse Y") * _speed;
 
-                transform.rotation = rotation;
+                transform.rotation = Quaternion.Euler(_y, _x, 0);
             }
             
             _targetVelocity = Vector3.Lerp(_targetVelocity, _moveDirection, _speed * deltaTime);
